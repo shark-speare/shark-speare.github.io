@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>(四) 播放音樂 | Sharkspeare筆記</title><meta name="author" content="鯊士比亞"><meta name="copyright" content="鯊士比亞"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="今天要來教怎麼做簡單的播放音樂功能啦自己研究的時候本來還覺得很困難，後來也發現其實很簡單今日都以Cog內的寫法為主喔 準備今天會用到神奇的下載模組pytubefix用fix是因為原本的失效了，作者好像也沒有要更新 1pip install pytubefix  再來就是超級常用的ffmpeg，自行下載只要放在機器人資料夾內就可以了，推薦路徑為從bot.py出發ffmpeg&#x2F;bin&#x2F;ffmpeg.e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(四) 播放音樂">
+<meta property="og:url" content="https://shark-speare.github.io/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/%E6%92%AD%E6%94%BE%E9%9F%B3%E6%A8%82/index.html">
+<meta property="og:site_name" content="Sharkspeare筆記">
+<meta property="og:description" content="今天要來教怎麼做簡單的播放音樂功能啦自己研究的時候本來還覺得很困難，後來也發現其實很簡單今日都以Cog內的寫法為主喔 準備今天會用到神奇的下載模組pytubefix用fix是因為原本的失效了，作者好像也沒有要更新 1pip install pytubefix  再來就是超級常用的ffmpeg，自行下載只要放在機器人資料夾內就可以了，推薦路徑為從bot.py出發ffmpeg&#x2F;bin&#x2F;ffmpeg.e">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://shark-speare.github.io/img/avatar.png">
+<meta property="article:published_time" content="2024-09-08T19:53:12.000Z">
+<meta property="article:modified_time" content="2024-08-31T19:53:45.636Z">
+<meta property="article:author" content="鯊士比亞">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Discord">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://shark-speare.github.io/img/avatar.png"><link rel="shortcut icon" href="/img/avatar.png"><link rel="canonical" href="https://shark-speare.github.io/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/%E6%92%AD%E6%94%BE%E9%9F%B3%E6%A8%82/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '載入更多'
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '(四) 播放音樂',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-01 03:53:45'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/"><i class="fa-fw fas fa-code"></i><span> 程式筆記</span></a></li><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E5%BB%A2%E6%96%87/"><i class="fa-fw fa-solid fa-leaf"></i><span> 生活廢文</span></a></li><li><a class="site-page child" href="/categories/%E9%81%8A%E6%88%B2/"><i class="fa-fw fas fa-gamepad"></i><span> 遊戲</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/Discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/"><i class="fa-fw fas fa-robot"></i><span> Discord機器人教學</span></a></div><div class="menus_item"><a class="site-page" href="/link"><i class="fa-fw fa-solid fa-landmark"></i><span> 各站駐本站代表處</span></a></div><div class="menus_item"><a class="site-page" href="/%E9%97%9C%E6%96%BC%E6%88%91/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/top_img.jpeg')"><nav id="nav"><span id="blog-info"><a href="/" title="Sharkspeare筆記"><img class="site-icon" src="/img/avatar.png"/><span class="site-name">Sharkspeare筆記</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/"><i class="fa-fw fas fa-code"></i><span> 程式筆記</span></a></li><li><a class="site-page child" href="/categories/%E7%94%9F%E6%B4%BB%E5%BB%A2%E6%96%87/"><i class="fa-fw fa-solid fa-leaf"></i><span> 生活廢文</span></a></li><li><a class="site-page child" href="/categories/%E9%81%8A%E6%88%B2/"><i class="fa-fw fas fa-gamepad"></i><span> 遊戲</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/Discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/"><i class="fa-fw fas fa-robot"></i><span> Discord機器人教學</span></a></div><div class="menus_item"><a class="site-page" href="/link"><i class="fa-fw fa-solid fa-landmark"></i><span> 各站駐本站代表處</span></a></div><div class="menus_item"><a class="site-page" href="/%E9%97%9C%E6%96%BC%E6%88%91/"><i class="fa-fw fas fa-heart"></i><span> 關於我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">(四) 播放音樂</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2024-09-08T19:53:12.000Z" title="發表於 2024-09-09 03:53:12">2024-09-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2024-08-31T19:53:45.636Z" title="更新於 2024-09-01 03:53:45">2024-09-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/">程式筆記</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/Discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/">Discord機器人教學</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>今天要來教怎麼做簡單的播放音樂功能啦<br>自己研究的時候本來還覺得很困難，後來也發現其實很簡單<br>今日都以Cog內的寫法為主喔</p>
+<h1 id="準備"><a href="#準備" class="headerlink" title="準備"></a>準備</h1><p>今天會用到神奇的下載模組pytubefix<br>用fix是因為原本的失效了，作者好像也沒有要更新</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pytubefix</span><br></pre></td></tr></table></figure>
+
+<p>再來就是超級常用的<a target="_blank" rel="noopener" href="https://www.ffmpeg.org/download.html">ffmpeg</a>，自行下載<br>只要放在機器人資料夾內就可以了，推薦路徑為從bot.py出發<code>ffmpeg/bin/ffmpeg.exe</code></p>
+<h1 id="加入和離開頻道"><a href="#加入和離開頻道" class="headerlink" title="加入和離開頻道"></a>加入和離開頻道</h1><h2 id="加入"><a href="#加入" class="headerlink" title="加入"></a>加入</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@commands.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">join</span>(<span class="params">self,ctx</span>)</span><br><span class="line">    <span class="comment"># 從機器人的所有語音連線中取得本伺服器的連線</span></span><br><span class="line">    <span class="comment"># utils是Discord附送的小功能，與機器人操作沒有任何關係</span></span><br><span class="line">    voice = discord.utils.get(<span class="variable language_">self</span>.bot.voice_clients, guild=ctx.guild)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 如果使用者目前沒有加入語音</span></span><br><span class="line">    <span class="keyword">if</span> ctx.author.voice == <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">await</span> ctx.send(<span class="string">&#x27;目前沒有加入語音&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 如果機器人已經在伺服器內的語音</span></span><br><span class="line">    <span class="keyword">elif</span> <span class="keyword">not</span> voice == <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">await</span> ctx.send(<span class="string">&#x27;機器人已經在某一頻道內了&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        voiceChannel = ctx.author.voice.channel</span><br><span class="line">        voiceChannel.connect()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="離開"><a href="#離開" class="headerlink" title="離開"></a>離開</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@commands.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">leave</span>(<span class="params">self,ctx:commands.Context</span>):</span><br><span class="line">voice = discord.utils.get(<span class="variable language_">self</span>.bot.voice_clients, guild = ctx.guild)</span><br><span class="line"><span class="comment"># 如果機器人本來就沒有連線</span></span><br><span class="line"><span class="keyword">if</span> voice == <span class="literal">None</span>:</span><br><span class="line">    <span class="keyword">await</span> ctx.send(<span class="string">&#x27;機器人沒有在語音頻道裡&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">await</span> voice.disconnect(force=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="取得音樂並播放"><a href="#取得音樂並播放" class="headerlink" title="取得音樂並播放"></a>取得音樂並播放</h1><h2 id="Discord音訊物件介紹"><a href="#Discord音訊物件介紹" class="headerlink" title="Discord音訊物件介紹"></a>Discord音訊物件介紹</h2><p><code>discord.FFmpegPCMAudio</code>是Discord專用的音訊物件，使用ffmpeg編碼後變成可以透過機器人播放的音訊<br>寫法為<code>discord.FFmpegPCMAudio(source=檔案來源,executable=ffmpeg路徑)</code><br>注意此處路徑須以bot.py為出發而非cog檔案</p>
+<h2 id="取得音樂部分"><a href="#取得音樂部分" class="headerlink" title="取得音樂部分"></a>取得音樂部分</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pytubefix <span class="keyword">import</span> Youtube</span><br><span class="line"></span><br><span class="line"><span class="meta">@commands.command()</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">play</span>(<span class="params">self,ctx,url</span>):</span><br><span class="line">    <span class="comment"># 此處省略是否連線的偵測以求簡便，若需要可使用與leave相同邏輯，可自行加上</span></span><br><span class="line">	voice = discord.utils.get(<span class="variable language_">self</span>.bot.voice_clients, guild = ctx.guild)</span><br><span class="line">	</span><br><span class="line">	<span class="comment"># 將網址內容下載為song.mp3</span></span><br><span class="line">	Youtube(url).streams.get_audio_only().download(mp3=<span class="literal">True</span>,filename=<span class="string">&#x27;song&#x27;</span>)</span><br><span class="line">	<span class="comment"># 播放轉化為特殊物件的音訊</span></span><br><span class="line">	voice.play(discord.FFmpegPCMAudio(source=<span class="string">&#x27;time.mp3&#x27;</span>,executable=<span class="string">&#x27;ffmpeg/bin/ffmpeg.exe&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<h1 id="暫停、繼續和停止"><a href="#暫停、繼續和停止" class="headerlink" title="暫停、繼續和停止"></a>暫停、繼續和停止</h1><p>此處一樣省略偵測邏輯，可參考<a href="#%E9%9B%A2%E9%96%8B">離開</a>相同邏輯</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">pause</span>(<span class="params">self,ctx</span>):</span><br><span class="line">      </span><br><span class="line">voice = discord.utils.get(<span class="variable language_">self</span>.bot.voice_clients, guild = ctx.guild)</span><br><span class="line"></span><br><span class="line">voice.pause()</span><br></pre></td></tr></table></figure>
+<p>三項操作的語法相同，將函式名稱和voice的方法替換成pause、resume和stop即可</p>
+<hr>
+<p>只要使用!play接網址，就可以輕鬆讓機器人播放音樂了<br>至於每個指令的其他提示文字可自行變化增減</p>
+<script src="https://giscus.app/client.js"
+        data-repo="shark-speare/shark-speare.github.io"
+        data-repo-id="R_kgDOMVhx9g"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOMVhx9s4CgwRa"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-TW"
+        crossorigin="anonymous"
+        async>
+</script></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://shark-speare.github.io">鯊士比亞</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章連結: </span><span class="post-copyright-info"><a href="https://shark-speare.github.io/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/%E6%92%AD%E6%94%BE%E9%9F%B3%E6%A8%82/">https://shark-speare.github.io/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/%E6%92%AD%E6%94%BE%E9%9F%B3%E6%A8%82/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://shark-speare.github.io" target="_blank">Sharkspeare筆記</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/Discord/">Discord</a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/%E5%8D%B0%E5%BA%A6%E9%A4%90%E5%BB%B3-%E6%B7%87%E9%87%8C%E6%80%9D/" title="印度餐廳-淇里思"><img class="cover" src="/%E5%8D%B0%E5%BA%A6%E9%A4%90%E5%BB%B3-%E6%B7%87%E9%87%8C%E6%80%9D/%E7%83%A4%E9%A4%85%E9%85%8D%E5%92%96%E5%93%A9.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">印度餐廳-淇里思</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相關推薦</span></div><div class="relatedPosts-list"><div><a href="/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/Cog%E7%B5%90%E6%A7%8B/" title="(三)Cog結構"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-31</div><div class="title">(三)Cog結構</div></div></a></div><div><a href="/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/%E5%9F%BA%E7%A4%8Ebot-py/" title="(一) 基礎bot.py"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-13</div><div class="title">(一) 基礎bot.py</div></div></a></div><div><a href="/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/%E6%8C%87%E4%BB%A4%E8%88%87%E8%A7%B8%E7%99%BC%E4%BA%8B%E4%BB%B6/" title="(二) 指令與觸發事件"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-14</div><div class="title">(二) 指令與觸發事件</div></div></a></div><div><a href="/Python%20Html%E5%89%96%E6%9E%90%E5%99%A8%E7%B0%A1%E5%96%AE%E6%87%89%E7%94%A8/" title="Python Html剖析器簡單應用"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-13</div><div class="title">Python Html剖析器簡單應用</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">鯊士比亞</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://discord.com/users/569309543297843214"><i class="fa-brands fa-discord"></i><span>來找我聊天!</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:jack04309487@gmail.com" target="_blank" title="Email"><i class="fa-regular fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.instagram.com/jack._.cotl/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram" style="color: #E4405F;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">快要開學了，作業都沒動，求解</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%BA%96%E5%82%99"><span class="toc-number">1.</span> <span class="toc-text">準備</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A0%E5%85%A5%E5%92%8C%E9%9B%A2%E9%96%8B%E9%A0%BB%E9%81%93"><span class="toc-number">2.</span> <span class="toc-text">加入和離開頻道</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E5%85%A5"><span class="toc-number">2.1.</span> <span class="toc-text">加入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%A2%E9%96%8B"><span class="toc-number">2.2.</span> <span class="toc-text">離開</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%96%E5%BE%97%E9%9F%B3%E6%A8%82%E4%B8%A6%E6%92%AD%E6%94%BE"><span class="toc-number">3.</span> <span class="toc-text">取得音樂並播放</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Discord%E9%9F%B3%E8%A8%8A%E7%89%A9%E4%BB%B6%E4%BB%8B%E7%B4%B9"><span class="toc-number">3.1.</span> <span class="toc-text">Discord音訊物件介紹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%96%E5%BE%97%E9%9F%B3%E6%A8%82%E9%83%A8%E5%88%86"><span class="toc-number">3.2.</span> <span class="toc-text">取得音樂部分</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9A%AB%E5%81%9C%E3%80%81%E7%B9%BC%E7%BA%8C%E5%92%8C%E5%81%9C%E6%AD%A2"><span class="toc-number">4.</span> <span class="toc-text">暫停、繼續和停止</span></a></li></ol></div></div><div class="card-widget card-post-series"><div class="item-headline"><i class="fa-solid fa-layer-group"></i><span>Discord機器人教學</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/%E5%9F%BA%E7%A4%8Ebot-py/" title="(一) 基礎bot.py">(一) 基礎bot.py</a><time datetime="2024-07-13T14:33:05.000Z" title="發表於 2024-07-13 22:33:05">2024-07-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/%E6%8C%87%E4%BB%A4%E8%88%87%E8%A7%B8%E7%99%BC%E4%BA%8B%E4%BB%B6/" title="(二) 指令與觸發事件">(二) 指令與觸發事件</a><time datetime="2024-07-14T11:16:32.000Z" title="發表於 2024-07-14 19:16:32">2024-07-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/Cog%E7%B5%90%E6%A7%8B/" title="(三)Cog結構">(三)Cog結構</a><time datetime="2024-07-31T03:09:49.000Z" title="發表於 2024-07-31 11:09:49">2024-07-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/%E6%92%AD%E6%94%BE%E9%9F%B3%E6%A8%82/" title="(四) 播放音樂">(四) 播放音樂</a><time datetime="2024-09-08T19:53:12.000Z" title="發表於 2024-09-09 03:53:12">2024-09-09</time></div></div></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/%E6%92%AD%E6%94%BE%E9%9F%B3%E6%A8%82/" title="(四) 播放音樂">(四) 播放音樂</a><time datetime="2024-09-08T19:53:12.000Z" title="發表於 2024-09-09 03:53:12">2024-09-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%8D%B0%E5%BA%A6%E9%A4%90%E5%BB%B3-%E6%B7%87%E9%87%8C%E6%80%9D/" title="印度餐廳-淇里思"><img src="/%E5%8D%B0%E5%BA%A6%E9%A4%90%E5%BB%B3-%E6%B7%87%E9%87%8C%E6%80%9D/%E7%83%A4%E9%A4%85%E9%85%8D%E5%92%96%E5%93%A9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="印度餐廳-淇里思"/></a><div class="content"><a class="title" href="/%E5%8D%B0%E5%BA%A6%E9%A4%90%E5%BB%B3-%E6%B7%87%E9%87%8C%E6%80%9D/" title="印度餐廳-淇里思">印度餐廳-淇里思</a><time datetime="2024-08-19T10:01:13.000Z" title="發表於 2024-08-19 18:01:13">2024-08-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%94%A8Github%20Action%E5%81%9A%E5%87%BA%E5%8B%95%E6%85%8B%E5%80%8B%E4%BA%BA%E6%AA%94%E6%A1%88/" title="用Github Action做出動態個人檔案"><img src="/%E7%94%A8Github%20Action%E5%81%9A%E5%87%BA%E5%8B%95%E6%85%8B%E5%80%8B%E4%BA%BA%E6%AA%94%E6%A1%88/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="用Github Action做出動態個人檔案"/></a><div class="content"><a class="title" href="/%E7%94%A8Github%20Action%E5%81%9A%E5%87%BA%E5%8B%95%E6%85%8B%E5%80%8B%E4%BA%BA%E6%AA%94%E6%A1%88/" title="用Github Action做出動態個人檔案">用Github Action做出動態個人檔案</a><time datetime="2024-07-31T14:10:24.000Z" title="發表於 2024-07-31 22:10:24">2024-07-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/discord%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%95%99%E5%AD%B8/Cog%E7%B5%90%E6%A7%8B/" title="(三)Cog結構">(三)Cog結構</a><time datetime="2024-07-31T03:09:49.000Z" title="發表於 2024-07-31 11:09:49">2024-07-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E8%B7%9F%E6%88%91%E5%AA%BD%E5%8E%BB%E6%95%B4%E5%BE%A9%E6%8C%89%E6%91%A9%E9%81%87%E5%88%B0%E7%8B%97%E5%8B%BE/" title="跟我媽去整復按摩遇到狗勾"><img src="/%E8%B7%9F%E6%88%91%E5%AA%BD%E5%8E%BB%E6%95%B4%E5%BE%A9%E6%8C%89%E6%91%A9%E9%81%87%E5%88%B0%E7%8B%97%E5%8B%BE/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="跟我媽去整復按摩遇到狗勾"/></a><div class="content"><a class="title" href="/%E8%B7%9F%E6%88%91%E5%AA%BD%E5%8E%BB%E6%95%B4%E5%BE%A9%E6%8C%89%E6%91%A9%E9%81%87%E5%88%B0%E7%8B%97%E5%8B%BE/" title="跟我媽去整復按摩遇到狗勾">跟我媽去整復按摩遇到狗勾</a><time datetime="2024-07-15T12:41:06.000Z" title="發表於 2024-07-15 20:41:06">2024-07-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 鯊士比亞</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="返回頂部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div></div></body></html>
