@@ -730,11 +730,11 @@ twikoo:
 # 官方文檔：https://giscus.app/
 giscus:
   # 倉庫地址
-  repo: shark-speare/shark-spears.github.io
+  repo: shark-speare/shark-speare.github.io
   # 倉庫 ID
-  repo_id: R_kgDONd85dQ
+  repo_id: R_kgDONd_sjQ
   # 分類 ID
-  category_id: DIC_kwDONd85dc4ClPqf
+  category_id: DIC_kwDONd_sjc4ClPzE
   # 主題配置，light 為淺色主題，dark 為深色主題
   theme:
     light: light
