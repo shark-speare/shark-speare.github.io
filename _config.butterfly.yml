@@ -196,6 +196,10 @@ subtitle:
   source: false
   # 如果關閉打字機效果，副標題將僅顯示 sub 的第一行內容
   sub:
+    - Coding
+    - Life
+    - Gaming
+    - Music
 
 # 首頁文章佈局
 # 1: 行佈局
