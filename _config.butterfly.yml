@@ -305,7 +305,7 @@ footer:
     # 是否啟用所有者顯示
     enable: true
     # 網站創建年份
-    since: 2019
+    since: 2024
   # 自定義文本
   custom_text:
   # 主題和框架的版權聲明
@@ -960,7 +960,7 @@ hr_icon:
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
   # 是否啟用打字機效果
-  enable: false
+  enable: true
   # 是否啟用彩色效果
   colorful: true
   # 是否啟用震動效果
@@ -1165,11 +1165,11 @@ pangu:
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
   # 是否啟用 Lazyload
-  enable: false
+  enable: true
   # 指定使用 Lazyload 的範圍 (site 或 post)
   field: site
   placeholder:
-  blur: false
+  blur: true
 
 # PWA
 # 參見 https://github.com/JLHwung/hexo-offline
