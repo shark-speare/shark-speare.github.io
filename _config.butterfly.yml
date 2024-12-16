@@ -1165,7 +1165,7 @@ pangu:
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
   # 是否啟用 Lazyload
-  enable: true
+  enable: false
   # 指定使用 Lazyload 的範圍 (site 或 post)
   field: site
   placeholder:
