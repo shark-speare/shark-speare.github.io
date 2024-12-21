@@ -103,3 +103,7 @@ theme: butterfly
 deploy:
   type: ''
 
+# Sitemap
+sitemap:
+  path: sitemap.xml
+
