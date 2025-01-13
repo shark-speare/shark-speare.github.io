@@ -21,7 +21,7 @@ menu:
     遊戲: /categories/遊戲/ || fas fa-gamepad
     詩文: /categories/詩文/ || fa-solid fa-cannabis
 
-  Discord機器人教學: categories/程式筆記/Discord機器人教學/ || fas fa-robot
+  Discord機器人教學: https://shark-speare.github.io/Discord-Bot-Note/ || fas fa-robot
   各站駐本站代表處: /link || fa-solid fa-landmark
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
