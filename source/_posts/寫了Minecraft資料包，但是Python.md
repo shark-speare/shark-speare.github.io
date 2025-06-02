@@ -5,6 +5,7 @@ categories: 生活廢文
 tags: 
     - Minecraft
     - 賺錢
+    - Python
 cover: /寫了Minecraft資料包，但是Python/cover.png
 ---
 
