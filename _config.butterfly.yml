@@ -414,7 +414,7 @@ aside:
     order: -1
   card_webinfo:
     # 是否顯示網站信息卡片
-    enable: true
+    enable: false
     # 是否顯示文章數量
     post_count: true
     # 是否顯示最後推送日期
