@@ -43,6 +43,8 @@ const skillsByCategory = categories.reduce(
 // 获取分类的翻译文本
 const getCategoryText = (category: string) => {
     switch (category) {
+        case "language":
+            return i18n(I18nKey.skillsLanguage)
         case "ai":
             return i18n(I18nKey.skillsAI);
         case "server":

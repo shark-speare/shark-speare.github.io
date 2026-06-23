@@ -39,7 +39,7 @@ export const LANGUAGE_CONFIG = {
         translateCode: "chinese_traditional",
         displayName: "繁體中文",
         locale: "zh-Hant",
-        icon: "🇨🇳",
+        icon: "🇹🇼",
     },
     zh_hans: {
         translateCode: "chinese_simplified",
