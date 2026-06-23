@@ -99,6 +99,7 @@ export const zh_hant: Translation = {
     [Key.skills]: "技能展示",
     [Key.skillsSubtitle]: "我的技術技能和專業知識",
     [Key.skillsLanguage]: "程式語言",
+    [Key.skillsPackage]: "套件",
     [Key.skillsAI]: "AI 開發",
     [Key.skillsBackend]: "後端開發",
     [Key.skillsClient]: "客戶端開發",

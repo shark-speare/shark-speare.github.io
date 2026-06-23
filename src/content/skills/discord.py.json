@@ -1,0 +1,10 @@
+{
+    "name": "discord.py",
+    "description": "Discord Bot API 的 Python Wrapper",
+    "icon": "ic:baseline-discord",
+    "level": "advanced",
+    "category": "package",
+    "experience": {
+        "years": 2
+    }
+}

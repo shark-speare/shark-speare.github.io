@@ -7,7 +7,9 @@ export interface Skill {
     name: string;
     description: string;
     icon: string; // Iconify icon name
-    category: "ai" | "backend" | "client" | "frontend" | "database" | "engines" | "tools" | "others";
+    category: "language" | "package" | "database" | "tools" | "others";
+    //我只留下我要的
+    // category: "ai" | "backend" | "client" | "frontend" | "database" | "engines" | "tools" | "others";
     level: "beginner" | "intermediate" | "advanced" | "expert";
     experience: {
         years: number;
@@ -36,13 +38,15 @@ export const getSkillStats = () => {
         expert: skillsData.filter((s) => s.level === "expert").length,
     };
     const byCategory = {
-        ai: skillsData.filter((s) => s.category === "ai").length,
-        backend: skillsData.filter((s) => s.category === "backend").length,
-        client: skillsData.filter((s) => s.category === "client").length,
-        frontend: skillsData.filter((s) => s.category === "frontend").length,
+        language: skillsData.filter((s) => s.category === "language").length,
+        package: skillsData.filter((s) => s.category === "package").length,
+        // ai: skillsData.filter((s) => s.category === "ai").length,
+        // backend: skillsData.filter((s) => s.category === "backend").length,
+        // client: skillsData.filter((s) => s.category === "client").length,
+        // frontend: skillsData.filter((s) => s.category === "frontend").length,
         database: skillsData.filter((s) => s.category === "database").length,
         tools: skillsData.filter((s) => s.category === "tools").length,
-        engines: skillsData.filter((s) => s.category === "engines").length,
+        // engines: skillsData.filter((s) => s.category === "engines").length,
         others: skillsData.filter((s) => s.category === "others").length,
     };
     return { total, byLevel, byCategory };
