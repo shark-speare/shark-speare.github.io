@@ -14,7 +14,7 @@ export const LinkPresets: { [key in LinkPreset]: NavbarLink } = {
         name: i18n(I18nKey.archive),
         url: "/archive/",
         icon: "material-symbols:archive",
-        description: "A chronological list of all published posts.",
+        description: "按時間順序排列的文章",
     },
     [LinkPreset.Projects]: {
         name: i18n(I18nKey.projects),
@@ -50,7 +50,7 @@ export const LinkPresets: { [key in LinkPreset]: NavbarLink } = {
         name: i18n(I18nKey.anime),
         url: "/anime/",
         icon: "material-symbols:movie",
-        description: "A list of anime I have watched.",
+        description: "看過的動畫",
     },
     [LinkPreset.Friends]: {
         name: i18n(I18nKey.friends),

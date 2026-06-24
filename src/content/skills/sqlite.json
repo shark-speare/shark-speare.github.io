@@ -1,0 +1,11 @@
+{
+    "name": "SQLite",
+    "description": "輕量級、無伺服器且零設定的關聯式資料庫",
+    "level": "beginner",
+    "category": "database",
+    "icon": "devicon:sqlite",
+    "experience": {
+        "years": 0,
+        "months": 0
+    }
+}
