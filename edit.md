@@ -4,3 +4,5 @@ src/utils/directory.ts
 src/i18n/
 src/utils/skills.ts
 src/pages/skills.astro 46
+
+src/style/banner.css 標題不要陰影
