@@ -1,7 +1,7 @@
 ---
 title: 獻給畢業的小品
 description: 一些畢業前構思的小詩作
-published: 2026-06-25
+published: 2026-06-25 16:51:00
 category: 詩作與散文
 slug: for-graduation
 tag: [ 畢業, 典故 ]
