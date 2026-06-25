@@ -40,7 +40,7 @@ tags: [畢業, 典故]
 
 在最後一句「都付笑談中」裡面其實藏了一個<span class="text-blue-600">附中</span>，而我後來才發現竟然有這種巧合。於是我也把這個小巧思在畢冊裡面標出來了。有趣的是，Canva不支援把文字轉成透明圖檔再拆開，或是幫文字的部件分別填色，所以實際上這個效果是先把「<span class="text-red-400">都付</span>」兩個字設定成紅色之後，拿純色方塊把「都」的「者」遮起來，再另外打一個黑色的「者」。
 
-![short peom in graduation album](book.png)
+![short peom in graduation album](./book.png)
 
 # 無人知道的小詩作
 
