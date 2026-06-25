@@ -6,3 +6,6 @@ src/utils/skills.ts
 src/pages/skills.astro 46
 
 src/style/banner.css 標題不要陰影
+
+src/components/musicPlayer.svelte
+不要切成meting

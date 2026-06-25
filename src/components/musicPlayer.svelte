@@ -776,11 +776,11 @@ onDestroy(() => {
                 </div>
             </div>
             <div class="flex items-center gap-1">
-                <button class="btn-plain w-8 h-8 rounded-lg flex items-center justify-center"
+                <!-- <button class="btn-plain w-8 h-8 rounded-lg flex items-center justify-center"
                         onclick={toggleMode}
                         title={mode === "meting" ? i18n(Key.musicSwitchToLocal) : i18n(Key.musicSwitchToMeting)}>
                     <Icon icon={mode === "meting" ? "material-symbols:cloud" : "material-symbols:folder"} class="text-lg" />
-                </button>
+                </button> -->
                 <button class="btn-plain w-8 h-8 rounded-lg flex items-center justify-center"
                         class:text-(--primary)={showPlaylist}
                         onclick={togglePlaylist}

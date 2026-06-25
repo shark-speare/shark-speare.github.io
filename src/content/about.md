@@ -2,28 +2,30 @@
 title: About
 ---
 
-# About This Site
+# 關於我
 
-Twilight is a CMS integrated static blog template built with [Astro](https://astro.build) framework.
+我是一個正在準備分科的高中生(準確來說是畢業的高中生)
 
-::github{repo="Spr-Aachen/Twilight"}
+高中加入電算社，當了兩年廢行政，結果跑去教小社課了
 
 
-## Milestones
+# 我的興趣
 
-- Integrated content management system in [#1](https://github.com/Spr-Aachen/Twilight/pull/1)
-- Seamless wallpaper mode switching in [#2](https://github.com/Spr-Aachen/Twilight/pull/2)
-- Dynamic content container response in [#47](https://github.com/Spr-Aachen/Twilight/pull/47)
-- Seamless page component loading in [#48](https://github.com/Spr-Aachen/Twilight/pull/48)
-- Smart music playback handling in [#49](https://github.com/Spr-Aachen/Twilight/pull/49)
-- Infinite-level navigation system in [#50](https://github.com/Spr-Aachen/Twilight/pull/50)
-- Comprehensive statistics dashboard in [#51](https://github.com/Spr-Aachen/Twilight/pull/51)
-- Low-barrier configuration scheme in [#58](https://github.com/Spr-Aachen/Twilight/pull/58)
-- Dynamic breakpoint handling in [#68](https://github.com/Spr-Aachen/Twilight/pull/68)
-- Advanced content management in [#73](https://github.com/Spr-Aachen/Twilight/pull/73)
-- Nested category support in [#74](https://github.com/Spr-Aachen/Twilight/pull/74)
-- Comprehensive music card plugin in [#81](https://github.com/Spr-Aachen/Twilight/pull/81)
-- Refactored DecapCMS OAuth integration in [#107](https://github.com/Spr-Aachen/Twilight/pull/107)
-- Non-breaking PagesCMS support in [#114](https://github.com/Spr-Aachen/Twilight/pull/114)
-- Directory tree view component in [#117](https://github.com/Spr-Aachen/Twilight/pull/117)
-- Enhanced post card cover handler in [#141](https://github.com/Spr-Aachen/Twilight/pull/141)
+* 寫程式
+* 聽 ASMR
+* 研究奇怪的工具
+* 聽音樂
+
+# 喜歡的團體 ヨルシカ
+
+我很喜歡日本雙人音樂團體 ヨルシカ。他們的作品經常圍繞人生、音樂與理想等主題展開，並透過跨專輯的敘事手法，構築出完整且連貫的世界觀。從初期的輕電吉到中期清新的搖滾曲風，再到近期偏向柔和的風格，都很吸引我。
+
+初次接觸他們時，我是被優美而富有特色的旋律所吸引；然而在深入閱讀歌詞後，才真正被作品中蘊含的情感與思想所打動。除此之外，團體也推出許多與作品相關的周邊企劃，進一步補足故事脈絡，讓整個世界觀更加立體完整。
+
+另一個令我著迷的地方，是他們的 Live 演出並非單純的演唱會，而是將獨立故事與音樂作品巧妙結合，創造出兼具敘事性與沉浸感的舞台體驗。我一直希望有朝一日能親自參與其中，感受那份只有現場才能體會的魅力。
+
+他們最新的專輯作品《二人称》更展現了獨特的創作理念。這是一部沒有實體唱片形式的作品，取而代之的是一本書信體小說。作品透過手寫信件的往來，描繪老師與學生之間的對話，以及對人生與哲學的思考，是一部十分值得收藏與細細品味的作品。
+
+目前我也正在學習日文，希望有一天能夠不再依賴翻譯，直接理解ヨルシカ想透過作品傳達的故事與情感。
+
+可以使用右下角的播放器收聽一些我的選曲 ◂Ⓘ▸

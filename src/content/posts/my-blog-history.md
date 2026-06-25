@@ -1,7 +1,7 @@
 ---
 title: 我的部落客史
 description: 跌跌撞撞撞撞的 Blog 生活
-tags: [web, Wordpress, Wix, blogspot, weebly, Google Site, Astro, blog]
+tags: [web, blog, Wordpress, Google Site]
 category: 關於我
 draft: false
 published: 2026-06-24 17:06:00
