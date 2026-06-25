@@ -192,7 +192,7 @@ export const zh_hant: Translation = {
     [Key.animeEmptyBangumi]: "請檢查 Bangumi 設定或網路連線",
 
     // 友鏈頁面
-    [Key.friends]: "友鏈",
+    [Key.friends]: "友列",
 
     // RSS頁面
     [Key.rss]: "RSS 訂閱",
