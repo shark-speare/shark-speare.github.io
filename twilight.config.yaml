@@ -141,7 +141,9 @@ site:
             # 动画周期 (s)
             interval: 1.5
     # favicon 配置
-    favicon: []
+    favicon: 
+        - 
+            src: "favicon/avatar.png"
     # bangumi 配置
     bangumi:
         # 用户 ID
