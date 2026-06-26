@@ -27,7 +27,6 @@ const ICON_SETS = {
     "mdi": "@iconify-json/mdi",
     "eos-icons": "@iconify-json/eos-icons",
     "logos": "@iconify-json/logos",
-    "devicon": "@iconify-json/devicon"
 };
 
 // 图标集数据缓存
