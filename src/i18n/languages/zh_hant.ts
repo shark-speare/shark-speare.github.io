@@ -106,7 +106,7 @@ export const zh_hant: Translation = {
     [Key.skillsFrontend]: "前端開發",
     [Key.skillsDatabase]: "資料庫",
     [Key.skillsEngines]: "引擎",
-    [Key.skillsTools]: "開發工具",
+    [Key.skillsTool]: "開發工具",
     [Key.skillsOthers]: "其他技能",
     [Key.skillLevel]: "熟練度",
     [Key.skillLevelBeginner]: "初學者",

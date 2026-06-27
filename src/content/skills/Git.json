@@ -1,0 +1,11 @@
+{
+    "name": "Git",
+    "description": "一個分散式版本控制軟體",
+    "icon": "skill-icons:git",
+    "level": "beginner",
+    "category": "tool",
+    "experience": {
+        "years": 1,
+        "months": 0
+    }
+}

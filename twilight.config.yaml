@@ -44,7 +44,7 @@ site:
         # 主题色的默认色相 (范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345)
         hue: 250
     # 默认主题 ("system" 跟随系统 | "light" 浅色 | "dark" 深色)
-    defaultTheme: "dark"
+    defaultTheme: "system"
     # 壁纸配置
     wallpaper:
         # 模式 ("banner" 横幅 | "fullscreen" 全屏 | "none" 纯色)
@@ -57,8 +57,8 @@ site:
                 - "/assets/images/banner2.jpg"
             # 移动壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             mobile:
-                - "/assets/images/mobileWallpaper_1.jpg"
-                - "/assets/images/mobileWallpaper_2.jpg"
+                - "/assets/images/banner1.jpg"
+                - "/assets/images/banner2.jpg"
         # 壁纸位置 ('top' | 'center' | 'bottom')
         position: "center"
         # 轮播配置 (fullscreen 和 banner 模式共享)
@@ -172,6 +172,8 @@ navbar:
     links:
         - # 一级导航链接 - 主页 (预设)
             "Home"
+        - # 一级导航链接 - 关于 (预设)
+            "About"
         # - # 一级导航链接 - 归档 (预设)
         #     "Archive"
         # - # 一级导航链接 - 展览 (自定义)
@@ -187,8 +189,8 @@ navbar:
         #     children:
         #         - # 二级导航链接 - 项目 (预设)
         #             "Projects"
-        #         - # 二级导航链接 - 技能 (预设)
-        #             "Skills"
+        - # 二级导航链接 - 技能 (预设)
+            "Skills"
                 # - # 二级导航链接 - 历程 (预设)
                 #     "Timeline"
                 # - # 二级导航链接 - 日记 (预设)
@@ -197,8 +199,7 @@ navbar:
                 #     "Albums"
                 # - # 二级导航链接 - 动画 (预设)
                 #     "Anime"
-        - # 一级导航链接 - 关于 (预设)
-            "About"
+        
         - # 一级导航链接 - 好友 (预设)
             "Friends"
         

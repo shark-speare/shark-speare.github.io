@@ -1,0 +1,11 @@
+{
+    "name": "HTML",
+    "description": "建構網頁與應用程式骨幹的標準標記語言中",
+    "icon": "skill-icons:html",
+    "level": "beginner",
+    "category": "language",
+    "experience": {
+        "years": 0,
+        "months": 1
+    }
+}
