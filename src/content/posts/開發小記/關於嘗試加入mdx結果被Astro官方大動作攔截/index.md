@@ -1,7 +1,6 @@
 ---
 title: 關於嘗試加入mdx結果被Astro官方更新攔截
 description: 我錯了我以後會關注官方的
-slug: failed-to-add-mdx-support
 published: 2026-06-27 13:52:00
 category: 開發小記
 tags: [web, Astro, mdx]

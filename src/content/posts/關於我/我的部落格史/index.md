@@ -3,7 +3,6 @@ title: 我的部落格史
 description: 跌跌撞撞撞撞的 Blog 生活
 tags: [web, blog, Wordpress, Google Site]
 category: 關於我
-slug: my-blog-history
 published: 2026-06-24 17:06:00
 ---
 

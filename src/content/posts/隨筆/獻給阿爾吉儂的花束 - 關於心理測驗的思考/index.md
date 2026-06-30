@@ -1,7 +1,6 @@
 ---
 title: 獻給阿爾吉儂的花束 - 關於心理測驗的思考
 description: 受試者知道了背後的理論，是不是會因此使實驗結果出現偏差？
-slug: algernon-and-psychological-test
 category: 隨筆
 tags: [獻給阿爾吉儂的花束, 心理測驗, 思考]
 published: 2026-06-26 22:37:00

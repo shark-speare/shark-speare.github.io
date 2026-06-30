@@ -3,7 +3,6 @@ title: Nvidia 的免費 API
 description: 突然被推到的免費好東西
 category: 開發小記
 tags: [AI, API]
-slug: nvidia-api
 published: 2026-06-30 00:30:00
 ---
 

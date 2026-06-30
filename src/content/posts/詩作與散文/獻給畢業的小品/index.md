@@ -4,7 +4,6 @@ description: 一些畢業前構思的小詩作
 published: 2026-06-25 16:51:00
 updated: 2026-06-26 09:58:00
 category: 詩作與散文
-slug: for-graduation
 tags: [畢業, 典故]
 ---
 
