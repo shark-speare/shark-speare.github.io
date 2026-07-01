@@ -441,43 +441,51 @@ musicPlayer:
             #     duration: 146
             -
                 id: 1
-                title: "雲になる"
+                title: "夏の肖像"
                 artist: "ヨルシカ"
-                cover: "assets/music/second_person/cover.png"
-                url: "assets/music/second_person/Become a cloud.mp3"
-                lrc: "assets/music/second_person/Become a cloud.lrc"
+                cover: "assets/music/cover.jpeg"
+                url: "assets/music/夏の肖像.mp3"
+                lrc: "assets/music/夏の肖像.lrc"
 
             -
                 id: 2
-                title: "花も騒めく"
+                title: "雪国"
                 artist: "ヨルシカ"
-                cover: "assets/music/second_person/cover.png"
-                url: "assets/music/second_person/The flowers are also noisy.mp3"
-                lrc: "assets/music/second_person/The flowers are also noisy.lrc"
+                cover: "assets/music/cover.jpeg"
+                url: "assets/music/雪国.mp3"
+                lrc: "assets/music/雪国.lrc"
 
             -
                 id: 3
-                title: "ポスト春"
+                title: "パドドゥ"
                 artist: "ヨルシカ"
-                cover: "assets/music/second_person/cover.png"
-                url: "assets/music/second_person/Post spring.mp3"
-                lrc: "assets/music/second_person/Post spring.lrc"
+                cover: "assets/music/cover.jpeg"
+                url: "assets/music/パドドゥ.mp3"
+                lrc: "assets/music/パドドゥ.lrc"
 
             -
                 id: 4
-                title: "レプリカント"
+                title: "靴の花火"
                 artist: "ヨルシカ"
-                cover: "assets/music/plagiarism/cover.jpeg"
-                url: "assets/music/plagiarism/Replicant.mp3"
-                lrc: "assets/music/plagiarism/Replicant.lrc"
+                cover: "assets/music/cover.jpeg"
+                url: "assets/music/靴の花火.mp3"
+                lrc: "assets/music/靴の花火.lrc"
 
             -
                 id: 5
-                title: "爆弾魔 (Re-Recording)"
+                title: "さよならモルテン"
                 artist: "ヨルシカ"
-                cover: "assets/music/plagiarism/cover.jpeg"
-                url: "assets/music/plagiarism/Bomber (Re-Recording).mp3"
-                lrc: "assets/music/plagiarism/Bomber (Re-Recording).lrc"
+                cover: "assets/music/cover.jpeg"
+                url: "assets/music/さよならモルテン.mp3"
+                lrc: "assets/music/さよならモルテン.lrc"
+
+            -
+                id: 6
+                title: "いさな"
+                artist: "ヨルシカ"
+                cover: "assets/music/cover.jpeg"
+                url: "assets/music/いさな.mp3"
+                lrc: "assets/music/いさな.lrc"
             
     # 是否自动播放
     autoplay: true
