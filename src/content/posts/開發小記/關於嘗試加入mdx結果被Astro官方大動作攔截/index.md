@@ -55,6 +55,7 @@ import frame from 'components/frame'
 <span class="text-red-400">
 一壺濁酒喜相逢。
 古今多少事，都付笑談中。
+</span>
 </Frame>
 ```
 
