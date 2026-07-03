@@ -281,7 +281,7 @@ sidebar:
 # 资料配置
 profile:
     # 头像配置 (相对于 /public 目录)
-    avatar: "/assets/images/avatar.png"
+    avatar: "/assets/images/avatar.webp"
     # 信息配置
     name: "鯊士比亞"
     # 简介配置
