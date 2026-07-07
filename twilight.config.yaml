@@ -56,12 +56,12 @@ site:
         src:
             # 桌面壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             desktop:
-                - "/assets/images/banner1.jpg"
-                - "/assets/images/banner2.jpg"
+                - "/assets/images/banner1.png"
+                - "/assets/images/banner2.png"
             # 移动壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             mobile:
-                - "/assets/images/banner1.jpg"
-                - "/assets/images/banner2.jpg"
+                - "/assets/images/banner1.png"
+                - "/assets/images/banner2.png"
         # 壁纸位置 ('top' | 'center' | 'bottom')
         position: "center"
         # 轮播配置 (fullscreen 和 banner 模式共享)
@@ -71,7 +71,7 @@ site:
             # 轮播间隔时间 (秒)
             interval: 3.6
             # 启用 Ken Burns 效果
-            kenBurns: true
+            kenBurns: false
         # Banner 模式专属配置
         banner:
             # 横幅文本配置
@@ -377,7 +377,7 @@ particle:
     # 粒子尺寸配置
     size:
         # 粒子最小尺寸倍数
-        min: 0.3
+        min: 0.5
         # 粒子最大尺寸倍数
         max: 0.9
     # 粒子透明度配置
