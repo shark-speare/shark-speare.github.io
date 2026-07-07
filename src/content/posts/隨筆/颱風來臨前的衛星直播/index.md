@@ -11,7 +11,8 @@ cover: sunset.webp
 
 這週六就是分科了，結果剛好遇到巴威來攪局，寫作的當下剛剛宣布延期，但不知道是延到禮拜一或禮拜二。讀書休息無事時，打開了Youtube的衛星直播看看地球上空。
 
-這是我看的直播 -> [](https://www.youtube.com/watch?v=fO9e9jnhYK8)
+這是我看的直播 -> [Live 4K video of Earth and space: 24/7 Livestream of Earth by Sen’s 4K video cameras on the ISS
+](https://www.youtube.com/watch?v=fO9e9jnhYK8)
 
 突然覺得沒事來看看地球長什麼樣子也很不錯。只是打開的時候已經接近傍晚了，經過台灣右側太平洋時已經是漆黑一片，畫面上剛好介紹到菲律賓海的暖海水會幫助颱風形成，可能會往菲律賓、台灣、日本的方向移動。
 
