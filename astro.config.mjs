@@ -20,6 +20,7 @@ import rehypeCallouts from "rehype-callouts";
 import remarkDirective from "remark-directive";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
+import mdx from "@astrojs/mdx"
 
 import { siteConfig } from "./src/config.ts";
 import { pluginCollapseButton } from "./src/plugins/expressive-code/collapse-button.ts";
@@ -149,6 +150,7 @@ export default defineConfig({
             preprocess: vitePreprocess(),
         }),
         sitemap(),
+        mdx()
     ],
     markdown: {
         remarkPlugins: [
