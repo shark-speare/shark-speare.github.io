@@ -1,7 +1,7 @@
 ---
 title: 關於賭氣和情勒
 description: 我家的賭氣和情勒都長什麼樣子
-category: 隨筆
+category: 關於我
 tags: [心情, 思考]
 published: 2026-06-30 22:37:00
 ---
