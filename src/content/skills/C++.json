@@ -1,0 +1,11 @@
+{
+    "name": "C++",
+    "description": "一種高效能的通用程式語言，廣泛應用於作業系統、遊戲引擎、大型軟體和嵌入式系統中",
+    "icon": "skill-icons:cpp",
+    "level": "intermediate",
+    "category": "language",
+    "experience": {
+        "years": 0,
+        "months": 10
+    }
+}

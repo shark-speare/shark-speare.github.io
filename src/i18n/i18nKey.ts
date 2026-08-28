@@ -96,6 +96,8 @@ enum I18nKey {
     skills = "skills",
     skillsSubtitle = "skillsSubtitle",
     skillsAI = "skillsAI",
+    skillsLanguage = "skillsLanguage",
+    skillsPackage = "skillsPackage",
     skillsBackend = "skillsBackend",
     skillsClient = "skillsClient",
     skillsFrontend = "skillsFrontend",
