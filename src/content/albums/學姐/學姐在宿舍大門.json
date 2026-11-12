@@ -1,0 +1,21 @@
+{
+    "title": "學姐在宿舍大門",
+    "description": "只有開學前出現過的稀有位置",
+    "date": "2026-11-13T00:04:00Z",
+    "tags": [
+        "學姐"
+    ],
+    "location": "光二舍大門前階梯",
+    "layout": "masonry",
+    "columns": 3,
+    "cover": "宿舍大門/1.jpeg",
+    "photos": [
+        {
+            "src": "宿舍大門/1.jpeg"
+        },
+        {
+            "src": "宿舍大門/2.jpeg"
+        }
+    ],
+    "visible": true
+}

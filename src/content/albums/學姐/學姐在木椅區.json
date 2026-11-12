@@ -1,0 +1,33 @@
+{
+    "title": "學姐在木椅區",
+    "description": "開學之後每天都在這裡出現，直到有人開始坐在這邊辦公（？",
+    "date": "2026-11-13T00:01:18Z",
+    "tags": [
+        "學姐"
+    ],
+    "location": "日軍臺灣步兵第二聯隊營舍前面",
+    "layout": "masonry",
+    "columns": 3,
+    "cover": "木椅區/1.jpeg",
+    "photos": [
+        {
+            "src": "木椅區/1.jpeg"
+        },
+        {
+            "src": "木椅區/2.jpeg"
+        },
+        {
+            "src": "木椅區/3.jpeg"
+        },
+        {
+            "src": "木椅區/4.jpeg"
+        },
+        {
+            "src": "木椅區/5.jpeg"
+        },
+        {
+            "src": "木椅區/6.jpeg"
+        }
+    ],
+    "visible": true
+}
