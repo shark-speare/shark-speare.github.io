@@ -154,7 +154,7 @@ export const zh_hant: Translation = {
 
     // 短文頁面
     [Key.diary]: "日記",
-    [Key.diarySubtitle]: "隨時隨地，分享生活",
+    [Key.diarySubtitle]: "隨手小記一篇",
     [Key.diaryCount]: "則短文",
     [Key.diaryImage]: "圖片",
     [Key.diaryReply]: "回覆",
@@ -165,7 +165,7 @@ export const zh_hant: Translation = {
 
     // 相簿頁面
     [Key.albums]: "相簿",
-    [Key.albumsSubtitle]: "記錄生活中的美好瞬間",
+    [Key.albumsSubtitle]: "一些照片，還有一堆學姐",
     [Key.albumsEmpty]: "暫無內容",
     [Key.albumsEmptyDesc]: "還沒有建立任何相簿，快去新增一些美好的回憶吧！",
     [Key.albumsBackToList]: "返回相簿",
